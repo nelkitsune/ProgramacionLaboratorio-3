@@ -59,3 +59,87 @@ body{
     border: 8px solid black;
 }
 /*fin punto 3*/
+
+/*punto 4*/
+#caja_relativa_punto4{
+    background-color: aquamarine;
+    position: relative;
+    top: 20px;
+    left: 150px;
+    padding: 5px;
+}
+#caja_absoluta_punto4{
+    background-color: chocolate;
+    position: absolute;
+    left: 270px;
+    top: 135px;
+
+}
+/*fin punto 4*/
+
+/*punto5*/
+@media (max-width: 768px){
+    .titulo_punto1{
+        background-color: blue;
+    }
+    #texto_punto5{
+        text-align: center;
+        text-decoration:overline;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #cita_punto5{
+        background-color: antiquewhite;
+        color: rgb(104, 103, 103);
+        text-decoration: line-through;
+        
+    }
+}
+/*fin punto 5*/
+
+/*punto 6*/
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+        gap: 20px;
+    }
+    .grid-item{
+        background-color: aquamarine;
+        text-align: center;
+        text-decoration: solid;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        border-radius: 10px;
+    }
+/*fin punto 6*/
+
+/*punto 7*/
+.animacion{
+    width: 100px;
+    height: 100px;
+    background-color: #2b91d4;
+    transition: background-color 0.5s ease;
+}
+.animacion:hover{
+    background-color: rgb(96, 201, 201);
+}
+
+.mover {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e49953;
+    animation: mover 3s infinite linear; 
+}
+@keyframes mover {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(300px); 
+    }
+}
+
+/*fin punto 7*/
