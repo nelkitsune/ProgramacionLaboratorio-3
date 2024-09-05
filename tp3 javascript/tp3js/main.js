@@ -85,3 +85,101 @@ function seccion3Punto2(){
 }
 
 seccion3Punto2()
+
+console.log("------------")
+
+//Funciones de JavaScript
+
+function esPar(num1){
+  if (num1 % 2 == 0){
+    return true
+  } else{
+    return false
+  }
+}
+
+function seccion4Ejercicio1(){
+  let num1 = prompt("ingrese un numero para averiguar si es par o impar ");
+  if(esPar(num1)){
+    console.log("el " + num1 + " es par")
+  }else{
+    console.log("el " + num1 + " es impar")
+  }
+}
+
+seccion4Ejercicio1()
+
+function convertirCelsiusAFahrenheit(num1){
+  return (num1 * 1.8 + 32)
+}
+
+function seccion4Ejercicio2(){
+  let celsius = prompt("ingrese la temperatura en celsius: ")
+  console.log("la convercion a fahrenheit es: "+ convertirCelsiusAFahrenheit(celsius))
+}
+
+seccion4Ejercicio2()
+
+//objetos js
+
+function seccion5Ejercicio1(){
+  let persona = {
+    nombre: "Ramiro",
+    ferrari: "Ferrari",
+    edad: 22,
+    ciudad: "Mendoza",
+    cambiarCiudad: function(nuevaCiudad){
+      this.ciudad = nuevaCiudad
+    }
+  }
+  console.log(persona.ciudad)
+  persona.cambiarCiudad("san juan")
+  console.log(persona.ciudad)
+}
+
+seccion5Ejercicio1()
+
+function seccion5Ejercicio2(){
+  let libro = {
+    titulo : "loperista",
+    autor : "pepito",
+    anio: 2002,
+    mas10anios: function(){
+      if((2024 - this.anio) > 10){
+        return true
+      }else {
+        return false
+      }
+    }
+  }
+  console.log("el libro tiene mas de 10 años: " + libro.mas10anios())
+}
+seccion5Ejercicio2()
+
+//array
+
+function seccion6Ejercicio1(){
+  let primerArray = [1,2,3,4,5,6,7,8,9,10]
+  let segundoArray =[]
+  primerArray.forEach(function(primerArray){
+    segundoArray.push(primerArray*2)
+  })
+  segundoArray.forEach(function(segundoArray){
+    console.log(segundoArray)
+  })
+}
+
+seccion6Ejercicio1()
+console.log("----------------")
+function seccion6Ejercicio2(){
+  let arrayNumeroPar = []
+  for(let i = 1 ; i<=20 ; i++){
+    if(i % 2 == 0){
+      arrayNumeroPar.push(i)
+    }
+  }
+  arrayNumeroPar.forEach(function(arrayNumeroPar){
+    console.log(arrayNumeroPar)
+  })
+}
+seccion6Ejercicio2()
