@@ -183,3 +183,75 @@ function seccion6Ejercicio2(){
   })
 }
 seccion6Ejercicio2()
+
+//doom
+const botonCambiarColor = document.getElementById(`botonColor`)
+const palabras = document.getElementById(`palabrasColor`)
+
+botonCambiarColor.addEventListener(`click`, function(){
+  palabras.style.color = "blue"
+})
+
+const botonTomarNombre = document.getElementById(`botonSacarNombre`)
+const textoConNombre = document.getElementById(`inputSacarNombre`)
+
+botonTomarNombre.addEventListener(`click`,function(){
+  alert("El nombre ingresado es: " + textoConNombre.value)
+})
+//-------
+
+//evento dom
+
+const lista = document.querySelectorAll(`#miLista li`)
+
+lista.forEach(function(item){
+  item.addEventListener(`click`,function(){
+    console.log(item.textContent)
+  })
+})
+
+const inputDeshabilitable = document.getElementById('inputDeshabilitable');
+const botonHabilitar = document.getElementById('botonDeHabilitar');
+const botonDeshabilitar = document.getElementById('botonDeDeshabilitar');
+
+botonDeshabilitar.addEventListener('click', function() {
+    inputDeshabilitable.disabled = true;
+});
+
+botonHabilitar.addEventListener('click', function() {
+    inputDeshabilitable.disabled = false;
+});
+
+function mostrarCorreoGuardado(){
+  const emailGuardado = localStorage.getItem('email');
+  if (emailGuardado) {
+    correoGuardadoDiv.textContent = `Correo guardado: ${emailGuardado}`;
+    correoGuardadoDiv.style.display = 'block';
+    botonEliminarCorreo.style.display = 'inline';
+  } else {
+    correoGuardadoDiv.textContent = '';
+    botonEliminarCorreo.style.display = 'none';
+  }
+}
+
+
+const emails = document.getElementById('correo')
+const botonEnviar = document.querySelector('form button[type="submit"]')
+const botonEliminarCorreo = document.getElementById('eliminarCorreo')
+const correoGuardadoDiv = document.getElementById('correoGuardado')
+
+botonEnviar.addEventListener('click', function(event){
+  event.preventDefault()
+  const datos = emails.value
+  localStorage.setItem('email', datos)
+  mostrarCorreoGuardado()
+});
+
+botonEliminarCorreo.addEventListener('click', function(){
+  localStorage.removeItem('email')
+  mostrarCorreoGuardado()
+});
+
+document.addEventListener('DOMContentLoaded', mostrarCorreoGuardado)
+
+
