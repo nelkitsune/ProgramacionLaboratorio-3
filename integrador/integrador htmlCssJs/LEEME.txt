@@ -1,0 +1,2 @@
+para ejecutar el programa se debe correr en la terminal de la ubicacion del archivo npm run dev
+luego ingresar al enlace que te suelta la terminal
